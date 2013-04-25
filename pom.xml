@@ -501,9 +501,9 @@
     </distributionManagement>
 
     <scm>
-      <connection>scm:git:git@github.comAvegaGroup/ElevateLabs.git</connection>
-      <developerConnection>scm:git:git@github.com:AvegaGroup/ElevateLabs.git</developerConnection>
-      <url>http://github.com/AvegaGroup/ElevateLabs</url>
+      <connection>scm:git:git@github.comAvegaGroup/spring-petclinic.git</connection>
+      <developerConnection>scm:git:git@github.com:AvegaGroup/spring-petclinic.git</developerConnection>
+      <url>http://github.com/AvegaGroup/spring-petclinic</url>
     </scm>
 
 </project>
