@@ -485,4 +485,25 @@
 		</pluginManagement>
 	</build>
 
+
+
+    <distributionManagement>
+        <repository>
+            <id>labci2</id>
+            <name>labci2-releases</name>
+            <url>http://192.168.17.35:8080/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>labci2</id>
+            <name>labci2-snapshots</name>
+            <url>http://192.168.17.35:8080/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+      <connection>scm:git:git@github.comAvegaGroup/ElevateLabs.git</connection>
+      <developerConnection>scm:git:git@github.com:AvegaGroup/ElevateLabs.git</developerConnection>
+      <url>http://github.com/AvegaGroup/ElevateLabs</url>
+    </scm>
+
 </project>
