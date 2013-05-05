@@ -1,3 +1,6 @@
+-- liquibase formatted sql
+
+-- changeset jelmstrom:insert_test_data
 INSERT IGNORE INTO vets VALUES (1, 'James', 'Carter');
 INSERT IGNORE INTO vets VALUES (2, 'Helen', 'Leary');
 INSERT IGNORE INTO vets VALUES (3, 'Linda', 'Douglas');
@@ -22,6 +25,8 @@ INSERT IGNORE INTO types VALUES (4, 'snake');
 INSERT IGNORE INTO types VALUES (5, 'bird');
 INSERT IGNORE INTO types VALUES (6, 'hamster');
 
+
+-- changeset jelmstrom :insert types
 INSERT IGNORE INTO owners VALUES (1, 'George', 'Franklin', '110 W. Liberty St.', 'Madison', '6085551023');
 INSERT IGNORE INTO owners VALUES (2, 'Betty', 'Davis', '638 Cardinal Ave.', 'Sun Prairie', '6085551749');
 INSERT IGNORE INTO owners VALUES (3, 'Eduardo', 'Rodriquez', '2693 Commerce St.', 'McFarland', '6085558763');

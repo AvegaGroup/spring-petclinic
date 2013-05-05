@@ -211,22 +211,26 @@
 		</dependency>
 
 		<!-- Databases - Uses HSQL by default -->
-		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> <version>${mysql.version}</version> </dependency> -->
+		<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!--
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 			<version>${hsqldb.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>org.glassfish.web</groupId>
 			<artifactId>jstl-impl</artifactId>
 			<version>${jstl.version}</version>
 		</dependency>
 
-		<!-- MySQL JDBC Connector -->
-		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> <version>${mysql.version}</version> </dependency> -->
-		<!-- HIBERNATE -->
+        <!-- HIBERNATE -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -340,7 +344,11 @@
 			<artifactId>datatables-servlet2</artifactId>
 			<version>${dandelion.datatables.version}</version>
 		</dependency>
-
+        <dependency>
+        	<groupId>org.liquibase</groupId>
+        	<artifactId>liquibase-core</artifactId>
+        	<version>2.0.5</version>
+        </dependency>
 
 	</dependencies>
 

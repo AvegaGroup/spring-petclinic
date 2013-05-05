@@ -1,6 +1,9 @@
-CREATE DATABASE IF NOT EXISTS petclinic;
-GRANT ALL PRIVILEGES ON petclinic.* TO pc@localhost IDENTIFIED BY 'pc';
+-- liquibase formatted sql
 
+-- CREATE DATABASE IF NOT EXISTS petclinic;
+-- GRANT ALL PRIVILEGES ON petclinic.* TO pc@localhost IDENTIFIED BY 'pc';
+
+-- changeset jelmstrom:create_tables
 USE petclinic;
 
 CREATE TABLE IF NOT EXISTS vets (
