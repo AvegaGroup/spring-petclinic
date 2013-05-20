@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.samples</groupId>
 	<artifactId>spring-petclinic</artifactId>
-	<version>1.0.61-SNAPSHOT</version>
+	<version>1.0.75-SNAPSHOT</version>
 
 	<name>petclinic</name>
 	<packaging>war</packaging>
@@ -66,7 +66,8 @@
 		<webjars-jquery.version>1.9.0</webjars-jquery.version>
 		<dandelion.datatables.version>0.8.11</dandelion.datatables.version>
 
-		<mysql.version>5.1.22</mysql.version>
+        <mysql.version>5.1.22</mysql.version>
+        <git.revision>localBuild_No_GitVersion</git.revision>
 
 	</properties>
 
@@ -355,6 +356,18 @@
 	<!-- all Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
 	<build>
 		<defaultGoal>install</defaultGoal>
+
+        <resources>
+          <resource>
+            <directory>src/main/resources/</directory>
+            <filtering>false</filtering>
+          </resource>
+          <resource>
+            <directory>src/main/resources/version/</directory>
+            <filtering>true</filtering>
+          </resource>
+         </resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -525,12 +538,12 @@
         <repository>
             <id>labci2</id>
             <name>labci2-releases</name>
-            <url>http://labci2:8080/artifactory/libs-release-local</url>
+            <url>http://ci1:8081/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
             <id>labci2</id>
             <name>labci2-snapshots</name>
-            <url>http://labci2:8080/artifactory/libs-snapshot-local</url>
+            <url>http://ci1:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
