@@ -530,12 +530,12 @@
         <repository>
             <id>labci2</id>
             <name>labci2-releases</name>
-            <url>http://labci2:8080/artifactory/libs-release-local</url>
+            <url>http://ci1:8081/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
             <id>labci2</id>
             <name>labci2-snapshots</name>
-            <url>http://labci2:8080/artifactory/libs-snapshot-local</url>
+            <url>http://ci1:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
