@@ -1,0 +1,2 @@
+maven.version=${project.version}
+git.version=${git.revision}
