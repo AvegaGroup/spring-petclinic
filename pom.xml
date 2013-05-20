@@ -434,9 +434,17 @@
 				<configuration>
 					<descriptors>
 						<descriptor>src/assemble/smoketest.xml</descriptor>
+						<descriptor>src/assemble/deployment.xml</descriptor>
 					</descriptors>
 				</configuration>
 				<executions>
+					<execution>
+						<id>deployment</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
 					<execution>
 						<id>smoketest</id> <!-- this is used for inheritance merges -->
 						<phase>package</phase> <!-- bind to the packaging phase -->
