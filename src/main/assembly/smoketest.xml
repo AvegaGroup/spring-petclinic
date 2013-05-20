@@ -5,7 +5,7 @@
 	</formats>
 	<fileSets>
 		<fileSet>
-			<directory>${basedir}/src/test/script/</directory>
+			<directory>${basedir}/src/main/assembly/resources/</directory>
 			<outputDirectory>/</outputDirectory>
 			<includes>
 				<include>*.sh</include>

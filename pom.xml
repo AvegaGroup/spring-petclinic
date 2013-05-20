@@ -358,14 +358,20 @@
 		<defaultGoal>install</defaultGoal>
 
         <resources>
-          <resource>
-            <directory>src/main/resources/</directory>
-            <filtering>false</filtering>
-          </resource>
-          <resource>
-            <directory>src/main/resources/version/</directory>
-            <filtering>true</filtering>
-          </resource>
+            <resource>
+                    <directory>src/main/resources</directory>
+                    <filtering>true</filtering>
+                    <includes>
+                      <include>**/version.txt</include>
+                    </includes>
+                  </resource>
+                  <resource>
+                    <directory>src/main/resources</directory>
+                    <filtering>false</filtering>
+                    <excludes>
+                      <exclude>**/version.txt</exclude>
+                    </excludes>
+                  </resource>
          </resources>
 
 		<plugins>
@@ -446,7 +452,7 @@
 				<version>2.4</version>
 				<configuration>
 					<descriptors>
-						<descriptor>src/assemble/smoketest.xml</descriptor>
+						<descriptor>src/main/assembly/smoketest.xml</descriptor>
 					</descriptors>
 				</configuration>
 				<executions>
