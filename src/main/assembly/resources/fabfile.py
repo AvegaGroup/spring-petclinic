@@ -43,7 +43,6 @@ def deploy_petclinic(build_number='${project.version}'):
     remote_smoke = "%s/smoketest.zip" % local_temp
 
     # creating local and remote temp directories
-    local("mkdir %s" % local_temp)
     run("mkdir %s" % local_temp)
 
     # download artefacts
