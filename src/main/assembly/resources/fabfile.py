@@ -9,7 +9,7 @@ env.user='root'
 
 @task
 def prod():
-    env.hosts = ['prod1','prod2']
+    env.hosts = ['prod1']
 
 @task
 def test():
