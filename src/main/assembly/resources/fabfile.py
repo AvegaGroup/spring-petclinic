@@ -1,6 +1,6 @@
 from fabric.api import *
 import time
-
+env.user='root'
 
 #env.roledefs = {                                                               
 #    'prod': ['labprod1', 'labprod2'],                                          
@@ -20,18 +20,10 @@ def host_type():
     run('uname -s')
     run('hostname -f')
 
-
-def get_version_number(build_number):
-    file_name = "/tmp/%s/version.txt" % build_number
-    for line in open(file_name).readlines():
-	if "maven.version" in line:
-	    return line.split('=')[1].strip()
-	raise "Failed to parse maven.version from " + file_name
-
 @task
-def deploy_petclinic(build_number='61'):
+def deploy_petclinic(build_number='${project.version}'):
     run('echo deploying pet clinic')
-    version_number = get_version_number(build_number)
+    version_number = '${project.version}'
 
     artefact_base_name = "spring-petclinic-" + version_number 
     artefact_smoke = "spring-petclinic-" + version_number + "-smoketest.zip"

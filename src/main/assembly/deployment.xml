@@ -3,13 +3,11 @@
 	<formats>
 		<format>zip</format>
 	</formats>
-	<fileSets>
-		<fileSet>
-			<directory>${basedir}/src/main/assembly/resources</directory>
-			<outputDirectory>/</outputDirectory>
-			<includes>
-				<include>fabfile.py</include>
-			</includes>
-		</fileSet>
-	</fileSets>
+    <files>
+       <file>
+             <source>${basedir}/src/main/assembly/resources/fabfile.py</source>
+             <outputDirectory>/</outputDirectory>
+             <filtered>true</filtered>
+       </file>
+    </files>
 </assembly>
