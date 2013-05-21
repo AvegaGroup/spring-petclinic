@@ -12,4 +12,11 @@
 			</includes>
 		</fileSet>
 	</fileSets>
+    <files>
+       <file>
+             <source>${basedir}/src/main/assembly/resources/version.txt</source>
+             <outputDirectory>/</outputDirectory>
+             <filtered>true</filtered>
+       </file>
+    </files>
 </assembly>
