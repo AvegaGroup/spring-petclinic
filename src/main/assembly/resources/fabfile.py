@@ -1,5 +1,7 @@
 from fabric.api import *
 import time
+import tempfile
+
 env.user='root'
 
 #env.roledefs = {                                                               
