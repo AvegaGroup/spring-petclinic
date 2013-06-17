@@ -530,7 +530,7 @@
     </distributionManagement>
 
     <scm>
-      <connection>scm:git:git@github.comAvegaGroup/spring-petclinic.git</connection>
+      <connection>scm:git:git@github.com:AvegaGroup/spring-petclinic.git</connection>
       <developerConnection>scm:git:git@github.com:AvegaGroup/spring-petclinic.git</developerConnection>
       <url>http://github.com/AvegaGroup/spring-petclinic</url>
     </scm>
