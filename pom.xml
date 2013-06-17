@@ -518,13 +518,13 @@
 
     <distributionManagement>
         <repository>
-            <id>labci2</id>
-            <name>labci2-releases</name>
+            <id>ci</id>
+            <name>ci-releases</name>
             <url>http://ci1:8081/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
-            <id>labci2</id>
-            <name>labci2-snapshots</name>
+            <id>ci</id>
+            <name>ci-snapshots</name>
             <url>http://ci1:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>

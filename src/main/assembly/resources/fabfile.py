@@ -4,10 +4,10 @@ import tempfile
 
 env.user='root'
 
-#env.roledefs = {                                                               
-#    'prod': ['labprod1', 'labprod2'],                                          
-#    'test': ['labtest1'],                                                      
-#}                                                                              
+#env.roledefs = {
+#    'prod': ['prod1', 'labprod2'],
+#    'test': ['labtest1'],
+#}
 
 @task
 def prod():
