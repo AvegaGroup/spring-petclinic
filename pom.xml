@@ -523,12 +523,12 @@
 
     <distributionManagement>
         <repository>
-            <id>ci</id>
+            <id>ci-releases</id>
             <name>ci-releases</name>
             <url>http://ci1:8081/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
-            <id>ci</id>
+            <id>ci-snapshots</id>
             <name>ci-snapshots</name>
             <url>http://ci1:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
