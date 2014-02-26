@@ -23,19 +23,18 @@ def host_type():
     run('hostname -f')
 
 @task
-def deploy_petclinic(build_number='${project.version}'):
+def deploy_petclinic(build_number=''):
     run('echo deploying pet clinic')
-    version_number = '${project.version}'
 
-    artefact_base_name = "spring-petclinic-" + version_number 
-    artefact_smoke = "spring-petclinic-" + version_number + "-smoketest.zip"
-    artefact_war = "spring-petclinic-" + version_number + ".war"
+    artefact_base_name = "spring-petclinic-" + build_number
+    artefact_smoke = "spring-petclinic-" + build_number + "-smoketest.zip"
+    artefact_war = "spring-petclinic-" + build_number + ".war"
 
-    repo_url = "http://ci1:8081/artifactory/libs-release-local/org/springframework/samples/spring-petclinic/%(version_number)s/%(artefact_name)s"
-    repo_war = repo_url % { "version_number" : version_number, "artefact_name" : artefact_war }
-    repo_smoke = repo_url % { "version_number" : version_number, "artefact_name" : artefact_smoke }
+    repo_url = "http://ci1:8081/artifactory/libs-release-local/org/springframework/samples/spring-petclinic/%(build_number)s/%(artefact_name)s"
+    repo_war = repo_url % { "build_number" : build_number, "artefact_name" : artefact_war }
+    repo_smoke = repo_url % { "build_number" : build_number, "artefact_name" : artefact_smoke }
 
-    local_temp=  tempfile.mkdtemp(prefix=version_number)
+    local_temp=  tempfile.mkdtemp(prefix=build_number)
     local_war =  "%s/petclinic.war" % local_temp
     local_smoke = "%s/smoketest.zip" % local_temp
 
@@ -68,6 +67,7 @@ def deploy_petclinic(build_number='${project.version}'):
     # run smoke test
     remote_smoke_bin = '%s/%s/%s' % (local_temp, artefact_base_name, "smoketest.sh")
     run('unzip %s -d %s' % (remote_smoke, local_temp))
+    run('sudo chmod 777 %s' % (remote_smoke_bin))
     run(remote_smoke_bin)
 
 
