@@ -30,7 +30,7 @@ def deploy_petclinic(build_number=''):
     artefact_smoke = "spring-petclinic-" + build_number + "-smoketest.zip"
     artefact_war = "spring-petclinic-" + build_number + ".war"
 
-    repo_url = "http://ci1:8081/artifactory/libs-release-local/org/springframework/samples/spring-petclinic/%(build_number)s/%(artefact_name)s"
+    repo_url = "http://artifactory:8081/artifactory/libs-release-local/org/springframework/samples/spring-petclinic/%(build_number)s/%(artefact_name)s"
     repo_war = repo_url % { "build_number" : build_number, "artefact_name" : artefact_war }
     repo_smoke = repo_url % { "build_number" : build_number, "artefact_name" : artefact_smoke }
 

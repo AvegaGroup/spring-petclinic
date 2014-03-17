@@ -525,12 +525,12 @@
         <repository>
             <id>ci-releases</id>
             <name>ci-releases</name>
-            <url>http://ci1:8081/artifactory/libs-release-local</url>
+            <url>http://artifactory:8081/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
             <id>ci-snapshots</id>
             <name>ci-snapshots</name>
-            <url>http://ci1:8081/artifactory/libs-snapshot-local</url>
+            <url>http://artifactory:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
